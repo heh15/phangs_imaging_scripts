@@ -1,3 +1,7 @@
+## Note from Hao He
+
+The current version runs for casa 6.2.1 and earlier versions. In the later version, the `uvcontsub` command seems to have different key parameters. 
+
 ## README for PHANGS-ALMA Pipeline Version 2.0
 
 ### PREFACE
