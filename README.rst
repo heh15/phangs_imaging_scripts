@@ -1,11 +1,17 @@
-**Note from Hao He**
-=============
+==================
+ Document Title
+==================
+
+Note from Hao He
+----------------
 
 The current version runs for casa 6.2.1 and earlier versions. In the later version, the `uvcontsub` command seems to have different key parameters. 
 
-## README for PHANGS-ALMA Pipeline Version 2.0
+README for PHANGS-ALMA Pipeline Version 2.0
+=============
 
-### PREFACE
+PREFACE
+----------------
 
 **Contents:** This is "version 2" of the [PHANGS](https://sites.google.com/view/phangs/home) post-processing and science-ready data product pipeline. These programs use CASA, as well as the Python package astropy and other affiliated packages (analysisutils, spectral-cube, reproject), to process data from calibrated visibilities to science-ready spectral cubes and maps. The procedures and background for key parts of the pipeline are discussed in the Astrophysical Journal Supplements Paper "PHANGS-ALMA Data Processing and Pipeline" by Leroy, Hughes, Liu, Pety, Rosolowsky, Saito, Schinnerer, Usero, Faesi, Herrera et al. [LINK](https://ui.adsabs.harvard.edu). Please consult that paper for more background and details.
 
@@ -33,7 +39,8 @@ The pipeline runs in two separate software environments:
 
 We recommend a standard [anaconda](https://www.anaconda.com/) distribution for python.
 
-### TWO WAYS TO USE THE PIPELINE
+TWO WAYS TO USE THE PIPELINE
+----------------
 
 There are two ways that this pipeline might be useful. First, it provides an end-to-end path to process calibrated ALMA data (or VLA data) of the sort produced by the scriptForPI script distributed by ALMA into spectral cubes and maps. That end-to-end approach is described in "Workflow for most users." Second, the `phangsPipeline` directory contains a number of modules for use inside and outside CASA that should have general utility. These are written without requiring any broader awareness of the pipeline infrastructure and should just be generally useful. These are files named `casaSOMENAME.py` and `scSOMEOTHERNAME.py` and, to a lesser extent, `utilsYETANOTHERNAME.py`.
 
@@ -59,7 +66,8 @@ The python (v3.x) script to create derived products is: `run_derived_pipeline_ph
 
 These can run the actual PHANGS-ALMA reduction, though in practice we used slightly more complex versions of a few programs to manage the workflow. Copying and modifying these is your best bet, especially following the patterns in the key files.
 
-### A FEW DETAILS ON PROCEDURE
+A FEW DETAILS ON PROCEDURE
+----------------
 
 The full procedure is described in our ApJ Supplements paper and the programs themselves are all in this repository, so we do not provide any extremely detailed docs here. Many individual routines are documented, though we also intend to improve the documentation in the future. Therefore we just note that broadly, the pipeline runs in four stages:
 
@@ -85,7 +93,8 @@ Then exit CASA and
 
 These two scripts are the ones listed above. They are heavily annotated and should provide a good starting point.
 
-### CONTENTS OF THE PIPELINE IN MORE DETAIL
+CONTENTS OF THE PIPELINE IN MORE DETAIL
+----------------
 
 **Architecture**: The pipeline is organized and run by a series of
 "handler" objects. These handlers organize the list of targets, array
